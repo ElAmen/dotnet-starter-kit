@@ -7,7 +7,7 @@ builder.AddContainer("grafana", "grafana/grafana")
 
 builder.AddContainer("prometheus", "prom/prometheus")
        .WithBindMount("../../../compose/prometheus", "/etc/prometheus", isReadOnly: true)
-       .WithHttpEndpoint(port: 9090, targetPort: 9090);
+       .WithHttpEndpoint(port: 9091, targetPort: 9091);
 
 builder.AddProject<Projects.Server>("webapi");
 
